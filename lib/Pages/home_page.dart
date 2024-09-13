@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:gptalk/Pages/Settings/settings_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,18 +6,24 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar:  const BottomAppBar(height: 50,
+        child: Row(
+          children: [],
+        ),
+      ),
       appBar: AppBar(
         title: const Text('GPTALK'),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Get.to(() => const SettingsPage());
-            },
-            icon: const Icon(Icons.settings),
-          )
-        ],
       ),
-      body: const SafeArea(child: Column()),
+      body: const SafeArea(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
