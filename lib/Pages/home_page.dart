@@ -24,20 +24,26 @@ class HomePage extends StatelessWidget {
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(20)),
                   child: const Row(
-                    children: [Icon(Icons.chat_outlined), Padding(
-                      padding: EdgeInsets.only(left: 3),
-                      child: Text("Chat"),
-                    )],
+                    children: [
+                      Icon(Icons.chat_outlined),
+                      Padding(
+                        padding: EdgeInsets.only(left: 3),
+                        child: Text("Chat"),
+                      )
+                    ],
                   ),
                 ),
                 Container(
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(20)),
                   child: const Row(
-                    children: [Icon(Icons.history), Padding(
-                      padding: EdgeInsets.only(left: 3),
-                      child: Text("History"),
-                    )],
+                    children: [
+                      Icon(Icons.history),
+                      Padding(
+                        padding: EdgeInsets.only(left: 3),
+                        child: Text("History"),
+                      )
+                    ],
                   ),
                 ),
                 Container(
@@ -55,13 +61,16 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            const TextField(
+            TextField(cursorColor:  Colors.blueAccent[400],
               autocorrect: true,
-              decoration: InputDecoration(
-                hintText: "Ask anything",
+              decoration: InputDecoration(contentPadding: const EdgeInsets.only(left: 10),
+                border: InputBorder.none,
+                hintText: 'Ask anything',hintStyle: const TextStyle(color: Color.fromARGB(186, 158, 158, 158)),
+                suffixIcon: const Padding(
+                  padding: EdgeInsets.only(right: 10,bottom: 22),
+                  child: Icon(Icons.send,size: 25),
+                ),suffixIconColor: Colors.blueAccent[400]
               ),
-              keyboardType: TextInputType.multiline,
-              textInputAction: TextInputAction.done,
             ),
           ],
         ),
