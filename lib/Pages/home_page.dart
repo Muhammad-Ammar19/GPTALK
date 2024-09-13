@@ -6,21 +6,33 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar:  const BottomAppBar(height: 50,
-        child: Row(
-          children: [],
-        ),
-      ),
       appBar: AppBar(
-        title: const Text('GPTALK'),
+        title: const Row(
+          children: [
+            Text('GPTALK'),
+          ],
+        ),
       ),
       body: const SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [],
-            )
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+               Text('Chats'),
+                Text('History'),
+                Text('Settings '),
+              ],
+            ),
+            TextField(
+              autocorrect: true,
+              decoration: InputDecoration(
+                hintText: "Ask anything",
+              ),
+              keyboardType: TextInputType.multiline,
+              textInputAction: TextInputAction.done,
+            ),
           ],
         ),
       ),

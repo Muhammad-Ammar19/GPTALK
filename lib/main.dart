@@ -11,10 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
+      theme: ThemeData.dark(), 
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       title: 'GPTALK',
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
