@@ -13,19 +13,49 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-               Text('Chats'),
-                Text('History'),
-                Text('Settings '),
+                Container(
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                  child: const Row(
+                    children: [Icon(Icons.chat_outlined), Padding(
+                      padding: EdgeInsets.only(left: 3),
+                      child: Text("Chat"),
+                    )],
+                  ),
+                ),
+                Container(
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                  child: const Row(
+                    children: [Icon(Icons.history), Padding(
+                      padding: EdgeInsets.only(left: 3),
+                      child: Text("History"),
+                    )],
+                  ),
+                ),
+                Container(
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.settings),
+                      Padding(
+                        padding: EdgeInsets.only(left: 3),
+                        child: Text("Settings"),
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
-            TextField(
+            const TextField(
               autocorrect: true,
               decoration: InputDecoration(
                 hintText: "Ask anything",
