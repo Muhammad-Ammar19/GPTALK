@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       ),
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+         
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -61,13 +61,21 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
+            
+            
+            
+            
+            
+            
+             const Spacer(),
+            const Divider(height: 20),
             TextField(cursorColor:  Colors.blueAccent[400],
               autocorrect: true,
               decoration: InputDecoration(contentPadding: const EdgeInsets.only(left: 10),
                 border: InputBorder.none,
                 hintText: 'Ask anything',hintStyle: const TextStyle(color: Color.fromARGB(186, 158, 158, 158)),
                 suffixIcon: const Padding(
-                  padding: EdgeInsets.only(right: 10,bottom: 22),
+                  padding: EdgeInsets.only(right: 10,bottom: 15),
                   child: Icon(Icons.send,size: 25),
                 ),suffixIconColor: Colors.blueAccent[400]
               ),
